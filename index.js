@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = 8080;
+const port = process.env.PORT || 8080;
 const path = require("path");
 const { v4: uuidv4 } = require('uuid');
 const methodOverride = require("method-override");
@@ -74,6 +74,10 @@ app.delete("/posts/:id", (req, res) =>{
     res.redirect("/posts");
 })
 
-app.listen(port, () => {
-    console.log("Listening on Port 8080");
-});
+if (process.env.NODE_ENV !== "production") {
+    app.listen(port, () => {
+        console.log(`Listening on Port ${port}`);
+    });
+}
+
+module.exports = app;
