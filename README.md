@@ -3,8 +3,7 @@
 A simple **Quora-inspired CRUD web application** built with **Node.js, Express.js, and EJS**. The application allows users to create, view, edit, and delete posts through a clean and responsive interface while demonstrating RESTful routing and server-side rendering.
 
 ## 🚀 Live Demo
-
-quora-posts-eta.vercel.app
+https://quora-posts-eta.vercel.app/posts
 
 ## ✨ Features
 
